@@ -62,7 +62,7 @@ $(function() {
       originalVal += newVal[newVal.length - 1];
       $("#" + idPrefix).val(originalVal);
       oldLength = newVal.length;
-    } else if (charCode == 8) {
+    } else if (charCode == 8 || event.which == 8) {
       //
       alert('found backspace' + " And pre Val :" + originalVal);
       originalVal = originalVal.slice(0, originalVal.length - 1);
