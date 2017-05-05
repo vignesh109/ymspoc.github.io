@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="jquery" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script> -->
+  </head>
+
+  <body>
+ 
+<input id="hiddenInput" type="number" class='hideOpacity'/>
+<div class="form-group required keyboard">
+	<label for="inboundNumber" class="control-label">
+	Inbound Number
+	</label>
+	<input 
+	class="form-control changeKeyInput"
+	required="required"
+	id="inboundNumber" maxlength="15" 
+	type="text">
+	<button id="inboundNumber-btn" type="button" class="btn btn-primary changeKeyType"> abc </button>  
+
+ </div> 
+ <div class="form-group required keyboard">
+              <label for="trailerNumber" class="control-label">
+                Trailer Number
+              </label>
+              <input 
+                  style="text-transform: uppercase" maxlength="14"
+                  class="form-control changeKeyInput"
+                  required="required"
+                  id="trailerNumber"
+                  type="text" onkeypress="return blockSpecialChars(event)">
+                  
+ <button id="trailerNumber-btn" type="button" class="btn btn-primary changeKeyType"> abc </button>
+            
+ </div>
+ 
+
+  </body>
+</html>
