@@ -41,13 +41,13 @@ $(function() {
   });
 
   $("#hiddenInput").off().on('keyup', function(event) {
-    alert("keyCode: " + event.which);
+    console.log("keyCode: " + event.which);
     // console.log(event);
 
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
     // Allow non-printable keys
     if (!charCode || charCode == 8 /* Backspace */ ) {
-      alert('backspace charCode:' + charCode);
+      alert('backspace :' + charCode);
     }
     var typedChar = String.fromCharCode(charCode);
     // Allow numeric characters
@@ -62,8 +62,7 @@ $(function() {
       originalVal += newVal[newVal.length - 1];
       $("#" + idPrefix).val(originalVal);
       oldLength = newVal.length;
-    } 
-    if (charCode == 8 || event.which == 8) {
+    } else if (charCode == 8) {
       //
       alert('found backspace' + " And pre Val :" + originalVal);
       originalVal = originalVal.slice(0, originalVal.length - 1);
