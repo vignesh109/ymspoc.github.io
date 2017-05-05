@@ -41,13 +41,13 @@ $(function() {
   });
 
   $("#hiddenInput").off().on('keyup', function(event) {
-    console.log("keyCode: " + event.which);
+    alert("keyCode: " + event.which);
     // console.log(event);
 
     var charCode = (typeof event.which == "number") ? event.charCode : event.keyCode;
     // Allow non-printable keys
     if (!charCode || charCode == 8 /* Backspace */ ) {
-      alert('backspace :' + charCode);
+      alert('backspace charCode:' + charCode);
     }
     var typedChar = String.fromCharCode(charCode);
     // Allow numeric characters
