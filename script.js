@@ -1,11 +1,10 @@
 // Add your javascript here
 $(function() {
 
-
+alert(1);
 
 
  $(".changeKeyType").on('click', function(e) {
-	 alert(1);
 	    $("#hiddenInput").val(0);
 	    var button = $(this);
 	    idPrefix = (this.id).split('-')[0];
